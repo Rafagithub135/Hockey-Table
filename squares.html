@@ -132,5 +132,413 @@
 <!--Google Tag Manager (noscript) -->
     <noscript>"<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M8SVHPD" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
     <!--End Google Tag Manager (noscript) -->
+    <div id="wrap">
+        <div id="header">
+            <div class="wrap">
+                <div id="title-area">
+                    <p id="title">
+                        ::before
+                        <a href="/">Easy Office Pools</a>
+                        ::after
+                        </p>
+                    <p id="description">Encouraging Enjoyment of Sports Worldwide</p>
+                </div>
+                <div class="widget-area header-widget-area">
+                    <div id="nav_menu-2" class="widget widget_nav_menu">
+                        <div class="widget-wrap">
+                            <div class="menu-pages-container">
+                                <ul id="menu-pages" class="menu genesis-nav-menu">
+                                    <li class="menu-item">
+                                        <a href="/createpool/" itemprop="url">
+                                            <span itemprop="name">Create</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="/view/" itemprop="url">
+                                            <span itemprop="name">View</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="/contact-us/" itemprop="url">
+                                            <span itemprop="name">Contact</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a target="_blank" href="https://help.easyofficepools.com/" itemprop="url">
+                                            <span itemprop="name">Help</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="/login">Login</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+
+        </script>
+        <script type="module" src="/squares/footballsquaresapp_vue.js?v44"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+        <style id="table_style">
+            #scenarios {
+                text-align: center;
+                font-size: small;
+                border: 1px solid #ddd;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+            .scenario-winner {
+                font-weight: bold;
+                color: green;
+            }
+
+            .game-cell {
+                /* text-align: left !important; */
+                border-radius: 6px;
+            }
+
+            .pick-team-container {
+                overflow-x: scroll;
+                vertical-align: top;
+            }
+
+            .pick-team-container td {
+                width: 143px;
+                padding: 2px !important;
+                vertical-align: top !important;
+            }
+
+            .pick-game-container {
+                display: block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                padding: 10px;
+                cursor: pointer;
+            }
+
+            .pick-game-table {
+                display: contents; /* inline; */
+                border: none;
+                padding: 14px !important;
+                border: none;
+                border-collapse: separate;
+            }
+
+            .pick-game-table td {
+                border-top: none !important;
+            }
+
+            .gameSelected {
+                border: 1.5px solid green;
+                /* background: #016646; */
+                /* color: white; */
+            }
+
+            .scroll-right {
+                padding: 10px 0 0 0;
+                font-size: 12px;
+                line-height: 1.5;
+                border-radius: 3px;
+                display: inline-block;
+            }
+
+            .week-dropdown li {
+                margin-left: 0 !important;
+            }
+
+            .other-games {
+                background-color: #eee;
+                border: 1.5px solid #ddd;
+                font-weight: bold;
+            }
+
+            .scheduled-table-container {
+                border: 2px solid #3c763d;
+                display: inline-block;
+                vertical-align: bottom;
+                border-radius: 4px;
+            }
+
+            .winners-cell {
+                background: white;
+                padding: 0;
+            }
+
+            .winners-container {
+                font-family: 'Courier New', monospace;
+                padding: 10px;
+                text-align: left;
+                font-size: 11px;
+                border-left: 1px solid #ddd;
+                font-weight: normal;
+            }
+
+            .winners-container-div {
+                text-align: center;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+
+            .winning-square-box {
+                background-color: green;
+                color: #fff;
+                padding: 10px;
+            }
+
+            #winners-table td:nth-child(-n+2) {
+                width: 40px;
+                padding: 2px !important;
+            }
+
+            #winners-table td:nth-child(3) {
+                text-align: left;
+                padding-left: 10px;
+            }
+
+            #winner-text {
+                color: green;
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            #winners-table {
+                display: inline;
+            }
+
+            .potential-winner {
+                background: #fff;
+                border: 1px solid green;
+                color: green;
+            }
+
+            .game-container {
+                overflow: auto;
+                white-space: nowrap;
+                margin-top: 6px;
+                margin-bottom: 6px;
+                text-align: center;
+            }
+
+            .game-container::-webkit-scrollbar, .pick-team-container::-webkit-scrollbar {
+                display: none;
+            }
+
+            .score-table {
+                border-collapse: separate !important;
+                /* display: inline; */
+                /* max-width: 390px; */
+                table-layout: inherit;
+                font-weight: normal !important;
+                color: #6c6d6f;
+                font-size: 11px;
+                margin-bottom: 0;
+            }
+
+            #scheduled-table {
+                display: contents; /* inline; */
+                border: none;
+            }
+
+            #scheduled-table tr td {
+                padding: 14px !important;
+                /* border: .5 0 .5 0 solid #ddd; */
+                border: none;
+            }
+
+            .score-table tr td {
+                border: .5 0 .5 0 solid #ddd !important;
+                padding: 8px !important;
+                border: none !important;
+            }
+
+            .score-table tr td:not(:first-child) {
+                width: 25px;
+                padding: 5px;
+            }
+
+            .score-table tr td:first-child, .score-table tr td:last-child {
+                font-weight: bold;
+                color: #000;
+            }
+
+            .score-table tr td:first-child {
+                text-align: left;
+                padding-left: 5px !important;
+                font-weight: bold;
+                font-size: 14px;
+            }
+
+            .scoreboard-status {
+                font-size: 11px;
+            }
+
+            .score-table tr td:last-child {
+                font-weight: 800;
+                font-size: 14px;
+            }
+
+            .day-time-network {
+                text-align: right;
+                white-space: nowrap;
+                font-size: 11px !important;
+            }
+
+            .clickableSquare {
+                cursor: pointer;
+            }
+
+            div.scrollmenu .btn:hover, div.scrollmenu .btn:focus, div.scrollmenu .btn.focus {
+                color: inherit !important;
+            }
+
+            div.scrollmenu {
+                overflow: auto;
+                white-space: nowrap;
+                margin-bottom: 6px;
+                text-align: center;
+            }
+
+            div.scrollmenu::-webkit-scrollbar {
+                display: none;
+            }
+
+            div.scrollmenu div {
+                display: inline-block;
+            }
+
+            .highlightPerson {
+                color: #3B763D;
+                background-color: #DFEFD8;
+                font-weight: bold;
+            }
+
+            #copy-success {
+                margin-top: 12px;
+            }
+
+            .board-url:active {
+                color: black;
+                box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+            }
+
+            .small {
+                font-size: 80%;
+            }
+
+            #share-bar {
+                padding: 9px;
+            }
+
+            .board-url {
+                cursor: pointer;
+                background: white;
+                border-radius: 4px;
+                word-break: break-word;
+                font-size: 11px;
+                border: 1px dashed;
+                padding: 6px;
+                display: inline-block;
+                margin-top: 12px;
+            }
+
+            [v-cloak] {
+                display: none;
+            }
+
+            table td[rowspan].team1 {
+                word-wrap: normal;
+                -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+                border: none !important;
+                white-space: nowrap;
+            }
+
+            .topScores {
+                background-color: #57514E;
+                color: white;
+            }
+
+            .bottomScores {
+                background-color: #F5F5F5;
+            }
+
+            .team1, .team2 {
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin-top: 15px !important;
+                text-align: center;
+            }
+
+            table {
+                width: 100%;
+                word-wrap: break-word;
+                table-layout: fixed;
+                border-collapse: collapse;
+                text-align: center;
+                padding: 5px 5px 5px 5px;
+                font-size: 12px;
+                font-weight: bold;
+                background-color: white;
+            }
+
+            table td {
+                padding: 0 !important;
+            }
+
+            .small {
+                vertical-align: middle;
+            }
+
+            #button-bar {
+                text-align: center;
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+
+            input, textarea, label, body {
+                font-size: 16px !important;
+            }
+
+            .btn-md {
+                padding: 8px !important;
+                font-size: 1.1em !important;
+            }
+
+            #button-bar span, #share-bar span, #print-button span {
+                vertical-align: middle;
+                display: inline-block;
+            }
+
+            .v-enter-active, .v-leave-active {
+                transition: opacity .5s ease;
+            }
+
+            .v-enter-from, .v-leave-to {
+                opacity: 0;
+            }
+
+            .board-head {
+                font-size: 30px;
+                margin-bottom: 8px;
+            }
+
+            .btn:hover, .btn:focus, .btn.focus {
+                color: inherit !important;
+                /* text-decoration: none; */
+            }
+
+            .btn-filled {
+                color: #fff;
+                background-color: green;
+            }
+        </style>
+    </div>
     </body>
 </html>
