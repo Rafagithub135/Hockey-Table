@@ -1,0 +1,13 @@
+div {
+    display: inline-block;
+}
+
+.block {
+    background-color: orange;
+    border: 3px solid black;
+    margin-bottom: 0;
+    padding: 1em;
+    height: 50px;
+    width: 100px;
+}
+
