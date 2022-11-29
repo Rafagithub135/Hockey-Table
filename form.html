@@ -31,13 +31,14 @@
     <input id="player" type="text" class="playerInfo" placeholder="Name">
     <br>
     <br>
-    <h2>Do you want to pick a square number?</h2>
-      <select name="square" id="sqr">
+    <h2>Do you want to pick a block number?</h2>
+    <label for="sqr">Choose</label><select name="square" id="sqr">
         <option value="random">Random</option>
         <option value="choose">Choose</option>
       </select>
 <br>
 <br>
+    <label for="squareNum">Block Number</label>
     <input type="text" id="squareNum" placeholder="Square Number">
     <br>
     <br>
@@ -61,6 +62,11 @@
     let submit = document.getElementById('submit');
     let playerInfo = document.getElementById('playerInfo');
 
+    if  (#sqr.value === 'random') {
+      let squareNum = Math.floor(Math.random() * 100);
+    } else {
+      let squareNum = document.getElementById('#squareNum');
+    }
     form.addEventListener('submit', function (e) {
         e.preventDefault();
         let playerInfo = {
