@@ -62,11 +62,7 @@
     let block = document.getElementById('sqr');
     let squareNum = document.getElementById('squareNum');
     let blockNumber;
-    if (block.value === 'Random') {
-        squareNum.disabled = true;
-    } else {
-        squareNum.disabled = false;
-    }
+    squareNum.disabled = block.value === 'Random';
         if (squareNum.value > 0 && squareNum.value < 101 && squareNum.value !== null) {
         blockNumber = squareNum.value;
     }
