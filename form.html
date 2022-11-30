@@ -65,22 +65,11 @@
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
-        let playerInfo = {
-            date: date.value,
-            time: time.value,
-            vteam: vteam.value,
-            hteam: hteam.value,
-            player: player.value,
-            sqr: sqr.value,
-            squareNum: squareNum.value
-        };
         localStorage.setItem('vteam', JSON.stringify(vteam));
         localStorage.setItem('hteam', JSON.stringify(hteam));
         localStorage.setItem('player', JSON.stringify(player));
         localStorage.setItem('sqr', JSON.stringify(sqr));
         localStorage.setItem('squareNum', JSON.stringify(squareNum));
-
-
         console.log(playerInfo);
         let playerInfoJSON = JSON.stringify(playerInfo);
         localStorage.setItem('playerInfo', playerInfoJSON);
