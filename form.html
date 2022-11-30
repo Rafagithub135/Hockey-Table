@@ -32,13 +32,14 @@
             <input id="player" type="text" class="playerInfo" placeholder="Name">
             <br>
             <br>
-            <h2>Do you want to pick a square number?</h2>
-            <select name="square" id="sqr">
-                <option value="random">Random</option>
-                <option value="choose">Choose</option>
-            </select>
+            <h2>Do you want to pick a block number?</h2>
+            <label for="sqr">Choose</label><select name="square" id="sqr">
+            <option value="random">Random</option>
+            <option value="choose">Choose</option>
+        </select>
             <br>
             <br>
+            <label for="squareNum">Block Number</label>
             <input type="text" id="squareNum" placeholder="Square Number">
             <br>
             <br>
@@ -58,11 +59,25 @@
     let vteam = document.getElementById('vteam');
     let hteam = document.getElementById('hteam');
     let player = document.getElementById('player');
-    let sqr = document.getElementById('sqr');
+    let block = document.getElementById('sqr');
     let squareNum = document.getElementById('squareNum');
-    let submit = document.getElementById('submit');
-    let playerInfo = document.getElementById('playerInfo');
+    let blockNumber;
+    if (block.value === 'Random') {
+        squareNum.disabled = true;
+    } else {
+        squareNum.disabled = false;
+    }
+        if (squareNum.value > 0 && squareNum.value < 101 && squareNum.value !== null) {
+        blockNumber = squareNum.value;
+    }
 
+    {
+        let squareNum = Math.floor(Math.random() * 100);
+    }
+    else
+    {
+        let squareNum = document.getElementById('#squareNum');
+    }
     form.addEventListener('submit', function (e) {
         e.preventDefault();
         localStorage.setItem('vteam', JSON.stringify(vteam));
